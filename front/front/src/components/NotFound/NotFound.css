@@ -1,0 +1,15 @@
+
+.notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.notFound .image {
+    display: block;
+    width: 30rem;
+}
+.notFound .image img {
+    width: 100%;
+    object-fit: contain;
+}

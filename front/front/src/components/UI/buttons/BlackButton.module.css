@@ -1,0 +1,39 @@
+.blackButton{
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px 1px;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 6px;
+    box-shadow: 0px 9px 20px rgba(0,0,0,0.25);
+}
+.blackButton:hover{
+    display: flex;
+    background-color: #4b0000;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px 1px;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 6px;
+    box-shadow: 0px 9px 20px rgba(0,0,0,0.25);
+}
+.blackButton:active{
+    display: flex;
+    background-color: #ff0000;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px 1px;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 6px;
+    box-shadow: 0px 9px 20px rgba(0,0,0,0.25);
+}
+.blackButton p{
+    color: #FFFFFF ;
+}

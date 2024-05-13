@@ -1,0 +1,26 @@
+.search {
+    width: 60%;
+}
+.search form{
+    display: flex;
+    align-items: center;
+}
+.search input{
+    width: 90%;
+    height: 70px;
+    padding-left: 30px;
+    border: 0px;
+    background: #ffff;
+    
+
+    font-family: 'Gotham Pro';
+    font-size: 22px;
+    line-height: 21px;
+    color: rgba(82, 82, 82, 0.8);
+}
+.search button{
+    background: #ffff;
+    height: 70px;
+    border: 0px;
+    padding: 10px;
+}
