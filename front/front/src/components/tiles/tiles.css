@@ -16,6 +16,7 @@
 }
 .test{
     display: flex;
+    width: 100%;
 }
 .side{
    background-color: rgba(104, 188, 224, 0.1);

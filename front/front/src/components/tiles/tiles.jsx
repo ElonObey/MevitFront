@@ -11,21 +11,31 @@ function Tiles() {
       <Search></Search>
       <div className="test">
         <div className="table">
-          <Link to="deformsrv">
-            <Block title="Анализ процесса деформации эритроцитов" />
-          </Link>
-          <Link to="plataggsrv">
-            <Block title="Анализ процесса агрегации тромбоцитов" />
-          </Link>
-          <Link to="erythaggsrv">
-            <Block title="Определение эритроцитов и агрегатов" />
-          </Link>
-          <Link to="partsizesrv">
-            <Block title="Анализ размера частиц" />
-          </Link>
-          <Link to="module">
-            <Block title="coming soon..." />
-          </Link>
+          <div>
+            <Link to="deformsrv">
+              <Block title="Анализ процесса деформации эритроцитов" />
+            </Link>
+          </div>
+          <div>
+            <Link to="plataggsrv">
+              <Block title="Анализ процесса агрегации тромбоцитов" />
+            </Link>
+          </div>
+          <div>
+            <Link to="erythaggsrv">
+              <Block title="Определение эритроцитов и агрегатов" />
+            </Link>
+          </div>
+          <div>
+            <Link to="partsizesrv">
+              <Block title="Анализ размера частиц" />
+            </Link>
+          </div>
+          <div>
+            <Link to="module">
+              <Block title="coming soon..." />
+            </Link>
+          </div>
         </div>
         <div className="side"></div>
       </div>

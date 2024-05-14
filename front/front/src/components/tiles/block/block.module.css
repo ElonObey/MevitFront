@@ -1,8 +1,11 @@
 .block{
     background-image: url(../../../assets/blockBcgr.png);
-    max-width: 300px;
-    max-height: 300px;
+    width: 250px;
+    height: 200px;
     margin: 4rem 2rem 0rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .textBlock{
     padding: 4rem 2rem 4rem 2rem;
