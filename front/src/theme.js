@@ -1,5 +1,5 @@
-import { colors, createTheme } from "@mui/material";
-import { hover } from "@testing-library/user-event/dist/hover";
+import { createTheme } from "@mui/material";
+
 
 export const baseTheme = createTheme({
   components: {
