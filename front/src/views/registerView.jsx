@@ -8,31 +8,32 @@ import PasswordField from "../components/UI/TextFields/PasswordField";
 //
 // TODO: декомпозировать
 //
-function AuthView() {
+function RegisterView() {
   return (
     <>
       <Box className="screen authWrapper">
         <Box className="bigLogo">
           <img src={bigLogo} />
         </Box>
-        <Stack sx={{ width: "350px", gap: 1, alignItems: "end" }}>
+        <Stack sx={{ width: "350px", gap: 5, alignItems: "end" }}>
           <Stack gap={1} width="100%">
-            
             <Typography>Логин</Typography>
-            <TextField id="outlined-basic" variant="outlined" />
+            <TextField id="login" variant="outlined" />
+
+            <Typography>E-mail</Typography>
+            <TextField id="Email" variant="outlined" />
 
             <Typography>Пароль</Typography>
             <PasswordField />
           </Stack>
 
-          <Typography>Забыли пароль?</Typography>
-
           <Button sx={{ width: "100%" }} variant="contained" size="large">
-            Войти
+            Зарегестрироваться
           </Button>
         </Stack>
-        <Stack alignItems="center" mt={5}>
-          <Typography>Нет аккаунта?</Typography>
+
+        <Box display="flex" alignItems="center" gap={1} mt={5}>
+          <Typography>Уже есть акканут?</Typography>
           <Link
             sx={{
               color: "black",
@@ -42,12 +43,12 @@ function AuthView() {
               lineHeight: "25px",
             }}
           >
-            Зарегестрируйтесь прямо сейчас
+            Войдите
           </Link>
-        </Stack>
+        </Box>
       </Box>
     </>
   );
 }
 
-export default AuthView;
+export default RegisterView;

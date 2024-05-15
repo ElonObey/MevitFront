@@ -3,7 +3,7 @@ import { Head } from "../components/header";
 import { Footer } from "../components/footer";
 import { Plataggsrv } from "../components/Module/plataggsrv";
 
-function ModuleView() {
+function PartsizesrvView() {
   return (
     <>
       <Head />
@@ -13,4 +13,4 @@ function ModuleView() {
   );
 }
 
-export { ModuleView };
+export { PartsizesrvView };

@@ -1,16 +1,16 @@
 import React from "react";
 import { Head } from "../components/header";
+import { Deformsrv } from "../components/Module/deformsrv";
 import { Footer } from "../components/footer";
-import { Plataggsrv } from "../components/Module/plataggsrv";
 
-function PlataggsrvView() {
+function DeformsView() {
   return (
     <>
       <Head />
-      <Plataggsrv />
+      <Deformsrv />
       <Footer />
     </>
   );
 }
 
-export { PlataggsrvView };
+export default DeformsView;

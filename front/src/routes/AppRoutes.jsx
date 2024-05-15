@@ -3,23 +3,25 @@ import { Routes, Route } from "react-router-dom";
 import { MainView } from "../views/mainView";
 import { NotFoundView } from "../views/notFoundView";
 import { ModuleView } from "../views/moduleView";
-import { Deformsrv } from "../components/Module/deformsrv";
-import { Erythaggsrv} from "../components/Module/erythaggsrv";
-import { Partsizesrv } from "../components/Module/partsizesrv";
-import { Plataggsrv } from "../components/Module/plataggsrv";
 import AuthView from "../views/authView";
+import RegisterView from "../views/registerView";
+import DeformsView from "../views/deformsView";
+import ErythaggsrvView from "../views/erythaggsrvView";
+import { PartsizesrvView } from "../views/partsizesrvView";
+import { PlataggsrvView } from "../views/plataggsrvView";
 
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<MainView/>}/>
+      <Route path="/" element={<MainView />} />
       <Route path="/main/" element={<MainView />} />
-      <Route path="/deformsrv" element={<Deformsrv/>}/>
-      <Route path="/erythaggsrv" element={<Erythaggsrv/>}/>
-      <Route path="/partsizesrv" element={<Partsizesrv/>}/>
-      <Route path="/plataggsrv" element={<Plataggsrv/>}/>
+      <Route path="/deformsrv" element={<DeformsView />} />
+      <Route path="/erythaggsrv" element={<ErythaggsrvView />} />
+      <Route path="/partsizesrv" element={<PartsizesrvView />} />
+      <Route path="/plataggsrv" element={<PlataggsrvView />} />
       <Route path="/module/" element={<ModuleView />} />
-      <Route path="/auth/" element={<AuthView />} />
+      <Route path="auth/" element={<AuthView />} />
+      <Route path="register/" element={<RegisterView />} />
       <Route path="*" element={<NotFoundView />} />
     </Routes>
   );
