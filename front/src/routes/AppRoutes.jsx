@@ -7,6 +7,7 @@ import { Deformsrv } from "../components/Module/deformsrv";
 import { Erythaggsrv} from "../components/Module/erythaggsrv";
 import { Partsizesrv } from "../components/Module/partsizesrv";
 import { Plataggsrv } from "../components/Module/plataggsrv";
+import AuthView from "../views/authView";
 
 function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ function AppRoutes() {
       <Route path="/partsizesrv" element={<Partsizesrv/>}/>
       <Route path="/plataggsrv" element={<Plataggsrv/>}/>
       <Route path="/module/" element={<ModuleView />} />
+      <Route path="/auth/" element={<AuthView />} />
       <Route path="*" element={<NotFoundView />} />
     </Routes>
   );

@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import bigLogo from "../assets/bigLogo.svg";
+import "./auth.css";
 
-function authView() {
+function AuthView() {
   return (
-    <div>authView</div>
-  )
+    <>
+      <div className="screen authWrapper">
+        <div className="bigLogo">
+          <img src={bigLogo} />
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default authView
+export default AuthView;
