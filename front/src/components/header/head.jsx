@@ -3,7 +3,8 @@ import React from "react";
 import logo from "../../assets/MeVitLogo.svg";
 import login from "../../assets/Login.svg";
 import { Link } from "react-router-dom";
-
+import { Button } from "@mui/material";
+import LoginIcon from '@mui/icons-material/Login';
 
 function Head() {
   return (
@@ -25,11 +26,10 @@ function Head() {
               <Link to="">Помощь</Link>
             </div>
           </div>
-
-          <a className="black-button">
-            <img src={login}></img>
-            <p> Вход </p>
-          </a>
+          
+          <Button href="/auth" size="large" sx={{width: '200px', height: '50px'}} endIcon={<LoginIcon/>}>
+            Вход
+          </Button>
         </div>
       </div>
     </header>

@@ -8,6 +8,7 @@ export const baseTheme = createTheme({
         root: {
           backgroundColor: "black",
           borderRadius: '6px',
+          color: 'white',
           '&:hover':{
             borderRadius: '6px',
             backgroundColor: "#474747",

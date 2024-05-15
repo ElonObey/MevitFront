@@ -42,6 +42,7 @@ function RegisterView() {
               textDecoretionLine: "underline",
               lineHeight: "25px",
             }}
+            href='/auth'
           >
             Войдите
           </Link>

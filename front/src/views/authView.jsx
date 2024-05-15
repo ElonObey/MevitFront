@@ -17,7 +17,6 @@ function AuthView() {
         </Box>
         <Stack sx={{ width: "350px", gap: 1, alignItems: "end" }}>
           <Stack gap={1} width="100%">
-            
             <Typography>Логин</Typography>
             <TextField id="outlined-basic" variant="outlined" />
 
@@ -27,7 +26,13 @@ function AuthView() {
 
           <Typography>Забыли пароль?</Typography>
 
-          <Button sx={{ width: "100%" }} variant="contained" size="large">
+          {/* Link for dev */}
+          <Button
+            href="/"
+            sx={{ width: "100%" }}
+            variant="contained"
+            size="large"
+          >
             Войти
           </Button>
         </Stack>
@@ -41,6 +46,7 @@ function AuthView() {
               textDecoretionLine: "underline",
               lineHeight: "25px",
             }}
+            href="/register"
           >
             Зарегестрируйтесь прямо сейчас
           </Link>
