@@ -1,7 +1,8 @@
-# Getting Started with Create React App
+# To launch the Frontend part of the application, you need to go to the Frontend folder and perform the following steps:
+## `npm i -c`
+## `npm start`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# For dev:
 ## Available Scripts
 
 In the project directory, you can run:
