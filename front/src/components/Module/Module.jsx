@@ -6,6 +6,7 @@ import { useDropzone } from "react-dropzone";
 import emptyImage from "../../assets/empty_image.jpg";
 import BlackButton from "../UI/buttons/BlackButton";
 import WhiteButton from "../UI/buttons/WhiteButton";
+import VoidImagePaper from "../UI/cardMedia/VoidImagePaper";
 
 function Module() {
   const service = "http://localhost:5100/";
@@ -68,7 +69,7 @@ function Module() {
         </div>
         <div className="image-block">
           <div className="image">
-            {source ? <img src={source} /> : <img src={emptyImage} />}
+            {source ? <img src={source} /> : <VoidImagePaper />}
           </div>
         </div>
       </div>

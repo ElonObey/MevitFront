@@ -20,6 +20,10 @@
     object-fit: cover;
     object-position: center;
 }
+.image-block .image {
+    height: 100%;
+    width: 100%;
+}
 .folder-block{
     flex:0 1 40%;
     overflow: scroll;

@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import analysis from "../../assets/mod_image.png";
 import FolderItem from "./folderItem";
 import {useDropzone} from 'react-dropzone';
+import VoidImagePaper from "../UI/cardMedia/VoidImagePaper";
 function Plataggsrv() {
 
 
@@ -66,7 +67,7 @@ function Plataggsrv() {
         </div>
         <div className="image-block">
           <div className="image">
-            <img src={source} />
+          {source ? <img src={source} /> : <VoidImagePaper />}
           </div>
         </div>
       </div>
