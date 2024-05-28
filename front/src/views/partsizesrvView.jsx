@@ -2,11 +2,13 @@ import React from "react";
 import { Head } from "../components/header";
 import { Footer } from "../components/footer";
 import { Plataggsrv } from "../components/Module/plataggsrv";
+import CustomAppBar from "../components/AppBar/CustomAppBar";
 
 function PartsizesrvView() {
   return (
     <>
-      <Head />
+      {/* <Head /> */}
+      <CustomAppBar/>
       <Plataggsrv/>
       <Footer />
     </>
