@@ -11,12 +11,14 @@ export default function CustomAppBar() {
       <Toolbar>
         <IconButton size="large" edge="start" sx={{ mr: 5 }}>
           <Box>
-            <img src={logo}></img>
+            <Link to={'/'}>
+              <img src={logo}></img>
+            </Link>
           </Box>
         </IconButton>
 
         <ButtonGroup sx={{ flexGrow: 1, gap: 2 }}>
-          <Link to='/'>
+          <Link to="/">
             <Button size="large" variant="text" color="inherit">
               Главная
             </Button>

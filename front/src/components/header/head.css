@@ -1,9 +1,9 @@
 .head{
     background-color: #EEF0F2;
 }
-.screen{
+/* .screen{
     padding: 1rem 15rem 1rem 5rem;
-}
+} */
 .content{
     display: flex;
     align-items: center;

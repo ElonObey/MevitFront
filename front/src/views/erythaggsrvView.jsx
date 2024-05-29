@@ -3,14 +3,15 @@ import { Head } from '../components/header'
 import { Footer } from '../components/footer'
 import { Erythaggsrv } from '../components/Module/erythaggsrv'
 import CustomAppBar from '../components/AppBar/CustomAppBar'
+import CustomFooter from '../components/footer/CustomFooter'
 
 function ErythaggsrvView() {
   return (
     <>
-    {/* <Head/> */}
     <CustomAppBar/>
     <Erythaggsrv/>
-    <Footer/>
+    {/* <Footer/> */}
+    <CustomFooter/>
     </>
   )
 }

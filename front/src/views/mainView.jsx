@@ -16,16 +16,16 @@ import LoginIcon from "@mui/icons-material/Login";
 import logo from "../assets/MeVitLogo64.svg";
 import CustomAppBar from "../components/AppBar/CustomAppBar";
 import CustomTiles from "../components/CustomTiles/CustomTiles";
+import CustomFooter from "../components/footer/CustomFooter";
 
 function MainView() {
   return (
     <>
       <CustomAppBar/>
-
-      {/* <Tiles /> */}
       <CustomTiles/>
-      {/* <Tiles/> */}
-      <Footer />
+      <CustomFooter/>
+
+      {/* <Footer /> */}
     </>
   );
 }

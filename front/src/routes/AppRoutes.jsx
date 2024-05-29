@@ -14,7 +14,6 @@ function AppRoutes() {
   return (
     // Feractoring -> MUI
     <Routes>
-      {/* Here */}
       <Route path="/" element={<MainView />} />
       <Route path="/main/" element={<MainView />} />
       <Route path="/deformsrv" element={<DeformsView />} />
