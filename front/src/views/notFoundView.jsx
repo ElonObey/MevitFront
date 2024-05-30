@@ -1,16 +1,14 @@
 import React from "react";
-import { Head } from "../components/header";
 import { NotFound } from "../components/NotFound";
-import { Footer } from "../components/footer";
 import CustomFooter from "../components/footer/CustomFooter";
+import CustomAppBar from "../components/AppBar/CustomAppBar";
 
 function NotFoundView() {
   return (
     <>
-      <Head />
+      <CustomAppBar />
       <NotFound />
-      <CustomFooter/>
-      {/* <Footer /> */}
+      <CustomFooter />
     </>
   );
 }
