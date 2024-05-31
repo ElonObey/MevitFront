@@ -1,5 +1,5 @@
 import * as React from "react";
-import bigLogo from "../assets/bigLogo.svg";
+import bigLogo from "../assets/Logo.png";
 import "./auth.css";
 import { Box, Link, Stack, TextField, Typography } from "@mui/material";
 import { Button } from "@mui/material";

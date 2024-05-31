@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Box, ButtonGroup, IconButton, Toolbar } from "@mui/material";
 import { Button } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
-import logo from "../../assets/MeVitLogo64.svg";
+import logo from "../../assets/MeVitLogo64.png";
 import { Link } from "react-router-dom";
 
 export default function CustomAppBar() {

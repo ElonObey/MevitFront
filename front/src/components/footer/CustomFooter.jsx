@@ -1,6 +1,6 @@
 import { Box, IconButton, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
-import logo from "../../assets/MeVitLogo64.svg";
+import logo from "../../assets/MeVitLogo64.png";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
