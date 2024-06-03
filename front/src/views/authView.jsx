@@ -4,11 +4,24 @@ import "./auth.css";
 import { Box, Link, Stack, TextField, Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import PasswordField from "../components/UI/TextFields/PasswordField";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../routes/useAuth";
 
 //
 // TODO: декомпозировать
 //
 export default function AuthView() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { signin } = useAuth();
+  const valueRef = React.useRef();
+  const fromPage = location.state?.from?.pathname || "/";
+
+  const handleSubmitv2 = () => {
+    const user = valueRef.current.value;
+    signin(user, () => navigate(fromPage, { replace: true }));
+  };
+
   return (
     <Stack
       height={"100%"}
@@ -21,7 +34,7 @@ export default function AuthView() {
       <Stack sx={{ width: "350px", gap: 1, alignItems: "end" }}>
         <Stack gap={1} width="100%">
           <Typography>Логин</Typography>
-          <TextField id="outlined-basic" variant="outlined" />
+          <TextField id="outlined-basic" variant="outlined" inputRef={valueRef} />
 
           <Typography>Пароль</Typography>
           <PasswordField />
@@ -31,10 +44,11 @@ export default function AuthView() {
 
         {/* Link for dev */}
         <Button
-          href="/"
+          // href="/"
           sx={{ width: "100%" }}
           variant="contained"
           size="large"
+          onClick={handleSubmitv2}
         >
           Войти
         </Button>

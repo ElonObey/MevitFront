@@ -1,17 +1,27 @@
 import React from "react";
-import { AppBar, Box, ButtonGroup, IconButton, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  ButtonGroup,
+  IconButton,
+  Toolbar,
+  useTheme,
+} from "@mui/material";
 import { Button } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
 import logo from "../../assets/MeVitLogo64.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../routes/useAuth";
 
 export default function CustomAppBar() {
+  const navigate = useNavigate();
+  const { user, signout } = useAuth();
   return (
-    <AppBar color="primary" position="sticky">
+    <AppBar color="white" position="sticky">
       <Toolbar>
         <IconButton size="large" edge="start" sx={{ mr: 5 }}>
           <Box>
-            <Link to={'/'}>
+            <Link to={"/"}>
               <img src={logo}></img>
             </Link>
           </Box>
@@ -31,7 +41,33 @@ export default function CustomAppBar() {
           </Button>
         </ButtonGroup>
 
-        <Link to={"auth"}>
+        <Box>
+          {user ? (
+            <>
+            {user}
+              <Button
+                onClick={() =>
+                  signout(() => navigate("auth", { replace: true }))
+                }
+                variant="outlined"
+                color="inherit"
+                startIcon={<LoginIcon />}
+              >
+                Выйти
+              </Button>
+            </>
+          ) : (
+            <Button
+              onClick={() => navigate("auth", { replace: true })}
+              variant="outlined"
+              color="inherit"
+              startIcon={<LoginIcon />}
+            >
+              Войти
+            </Button>
+          )}
+        </Box>
+        {/* <Link to={"auth"}>
           <Button
             // href="/auth"
             variant="outlined"
@@ -40,7 +76,7 @@ export default function CustomAppBar() {
           >
             Вход
           </Button>
-        </Link>
+        </Link> */}
       </Toolbar>
     </AppBar>
   );

@@ -1,9 +1,12 @@
 import { createTheme } from "@mui/material";
 
-export const baseTheme = createTheme({
+const BaseTheme = createTheme({
   palette: {
     primary: {
-      main: "#fff",
+      main: "#000",
+    },
+    secondary: {
+      main: '#fff',
     },
   },
   components: {
@@ -35,6 +38,18 @@ export const baseTheme = createTheme({
         },
       ],
     },
+  },
+});
+
+export const theme = createTheme(BaseTheme, {
+  // Custom colors created with augmentColor go here
+  palette: {
+    white: BaseTheme.palette.augmentColor({
+      color: {
+        main: '#fff',
+      },
+      name: 'white',
+    }),
   },
 });
 
