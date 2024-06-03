@@ -15,14 +15,17 @@ import {
 import { Button } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
 import logo from "../../assets/MeVitLogo64.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import { useAuth } from "../../routes/useAuth";
 
 export default function CustomAppBar() {
   const [anchorElNav, setAnchorElNav] = useState();
   const [anchorElUser, setAnchorElUser] = useState();
 
-  const settings = ["Profile", "Account", "Dashboard", "Logout"];
+  const settings = [
+    { name: "Profile", route: "/erythaggsrv" },
+    { name: "Logout", route: "/auth" },
+  ];
 
   const navigate = useNavigate();
   const { user, signout } = useAuth();
@@ -32,6 +35,11 @@ export default function CustomAppBar() {
   };
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+  const routeCheck = (route) => {
+    route == "/auth"
+      ? signout(() => navigate(route, { replace: true }))
+      : navigate(route, { replace: true });
   };
   return (
     <AppBar color="white" position="sticky">
@@ -83,9 +91,9 @@ export default function CustomAppBar() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
+                {settings.map(({ name, route }) => (
+                  <MenuItem key={name} onClick={() => routeCheck(route)}>
+                    <Typography textAlign="center">{name}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
