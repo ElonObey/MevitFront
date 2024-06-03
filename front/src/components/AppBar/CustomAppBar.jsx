@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
+  Avatar,
   Box,
   ButtonGroup,
   IconButton,
+  Menu,
+  MenuItem,
   Toolbar,
+  Tooltip,
+  Typography,
   useTheme,
 } from "@mui/material";
 import { Button } from "@mui/material";
@@ -14,8 +19,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../routes/useAuth";
 
 export default function CustomAppBar() {
+  const [anchorElNav, setAnchorElNav] = useState();
+  const [anchorElUser, setAnchorElUser] = useState();
+
+  const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
   const navigate = useNavigate();
   const { user, signout } = useAuth();
+
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
   return (
     <AppBar color="white" position="sticky">
       <Toolbar>
@@ -44,7 +61,35 @@ export default function CustomAppBar() {
         <Box>
           {user ? (
             <>
-            {user}
+              <Tooltip>
+                <IconButton onClick={handleOpenUserMenu}>
+                  <Avatar>{user[0]}</Avatar>
+                </IconButton>
+              </Tooltip>
+
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+
               <Button
                 onClick={() =>
                   signout(() => navigate("auth", { replace: true }))
