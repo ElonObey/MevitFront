@@ -7,10 +7,10 @@ import emptyImage from "../../assets/empty_image.jpg";
 import BlackButton from "../UI/buttons/BlackButton";
 import WhiteButton from "../UI/buttons/WhiteButton";
 import VoidImagePaper from "../UI/cardMedia/VoidImagePaper";
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 
 function Module() {
-  const service = "http://localhost:5100/";
+  const service = "/";
   const [source, setSource] = useState("");
   const [file_list, set_file_list] = useState([]);
 
@@ -18,6 +18,7 @@ function Module() {
     set_file_list((prev) => [...prev, ...acceptedFiles]);
     let files = acceptedFiles;
     const files_data = new FormData();
+
     for (var i = 0; i < files.length; i++) {
       files_data.append("files", files[i]);
       files_data.append("names", files[i].name);
@@ -48,9 +49,7 @@ function Module() {
     },
     onDrop,
   });
-  {
-    /*Generate file list*/
-  }
+
   const files = acceptedFiles.map((file) => (
     <div onClick={(e) => doubleClickFileName(e, file.path)}>
       <FolderItem fileName={file.path} data={file.size + " MB"} />
@@ -59,14 +58,21 @@ function Module() {
 
   return (
     <Stack height={"100%"} p={5} gap={3}>
-      <Typography variant="h4">Анализ процесса агрегации эритроцитов</Typography>
+      <Typography variant="h4">
+        Анализ процесса агрегации эритроцитов
+      </Typography>
 
-      <Stack gap={3} display={"flex"} justifyContent={"space-around"} height={"100%"}>
+      <Stack
+        gap={3}
+        display={"flex"}
+        justifyContent={"space-around"}
+        height={"100%"}
+      >
         <Box display={"flex"} height={"inherit"}>
           <Paper sx={{ height: "100%", flex: "0 1 40%" }} overflow={"scroll"}>
             <Box p={2}>
               <Typography variant="body">Загруженные файлы</Typography>
-            {files}
+              {files}
             </Box>
           </Paper>
 
@@ -75,9 +81,11 @@ function Module() {
           </Box>
         </Box>
 
-        <Box display={"flex"} justifyContent={'flex-end'} gap={3}>
-          <WhiteButton> Сохранить </WhiteButton>
-          <BlackButton onClick={open}>Загрузить</BlackButton>
+        <Box display={"flex"} justifyContent={"flex-end"} gap={3}>
+          <Button size="large" variant="outlined"> Coхранить</Button>
+          <Button size="large" variant="contained" onClick={open}>
+            <input {...getInputProps()} /> Загрузить
+          </Button>
         </Box>
       </Stack>
     </Stack>
