@@ -17,19 +17,19 @@ function AppRoutes() {
     // Feractoring -> MUI
     <AuthProvider>
       <Routes>
-        <Route
+        {/* <Route
           path="/"
           element={
             <RequireAuth>
               <MainView />
             </RequireAuth>
           }
-        />
-        {/* <Route path="/main/" element={<MainView />} /> */}
-        <Route path="/deformsrv" element={<DeformsView />} />
-        <Route path="/erythaggsrv" element={<ErythaggsrvView />} />
-        <Route path="/partsizesrv" element={<PartsizesrvView />} />
-        <Route path="/plataggsrv" element={<PlataggsrvView />} />
+        /> */}
+        <Route path="/" element={<MainView />} />
+        <Route path="/deformsrv" element={<RequireAuth><DeformsView /></RequireAuth>} />
+        <Route path="/erythaggsrv" element={<RequireAuth><ErythaggsrvView /></RequireAuth>} />
+        <Route path="/partsizesrv" element={<RequireAuth><PartsizesrvView /></RequireAuth>} />
+        <Route path="/plataggsrv" element={<RequireAuth><PlataggsrvView /></RequireAuth>} />
         <Route path="/module/" element={<ModuleView />} />
         <Route path="auth/" element={<AuthView />} />
         <Route path="register/" element={<RegisterView />} />

@@ -4,9 +4,8 @@ import analysis from "../../assets/mod_image.png";
 import FolderItem from "./folderItem";
 import {useDropzone} from 'react-dropzone';
 import VoidImagePaper from "../UI/cardMedia/VoidImagePaper";
+
 function Plataggsrv() {
-
-
   const service = '/'
   const [source, setSource] = useState("");
   const [file_list, set_file_list] = useState([]);

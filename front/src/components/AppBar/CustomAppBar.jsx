@@ -120,16 +120,6 @@ export default function CustomAppBar() {
             </Button>
           )}
         </Box>
-        {/* <Link to={"auth"}>
-          <Button
-            // href="/auth"
-            variant="outlined"
-            color="inherit"
-            startIcon={<LoginIcon />}
-          >
-            Вход
-          </Button>
-        </Link> */}
       </Toolbar>
     </AppBar>
   );

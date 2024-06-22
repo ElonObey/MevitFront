@@ -41,10 +41,7 @@ export default function AuthView() {
         </Stack>
 
         <Typography>Забыли пароль?</Typography>
-
-        {/* Link for dev */}
         <Button
-          // href="/"
           sx={{ width: "100%" }}
           variant="contained"
           size="large"
