@@ -8,10 +8,7 @@ function PlataggsrvView() {
   return (
     <>
       <CustomAppBar />
-      <Wrapper>
-        <Plataggsrv />
-      </Wrapper>
-
+      <Plataggsrv />
       <CustomFooter />
     </>
   );

@@ -8,10 +8,7 @@ function PartsizesrvView() {
   return (
     <>
       <CustomAppBar />
-      <Wrapper>
         <Partsizesrv />
-      </Wrapper>
-
       <CustomFooter />
     </>
   );

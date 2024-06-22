@@ -4,6 +4,8 @@ import analysis from "../../assets/mod_image.png";
 import FolderItem from "./folderItem";
 import { useDropzone } from "react-dropzone";
 import VoidImagePaper from "../UI/cardMedia/VoidImagePaper";
+import { Box, Button, Paper, Stack, Typography } from "@mui/material";
+
 
 function Partsizesrv() {
   const service = "/";
@@ -54,32 +56,38 @@ function Partsizesrv() {
   ));
 
   return (
-    <div className="module screen">
-      <div className="header">
-        <h2>Анализ размера частиц</h2>
-      </div>
-      <div className="container">
-        <div className="folder-block">
-          <h3 className="subhead">загруженные файлы</h3>
-          {/* Ахтунг эти блоки должны быть переделаны в модуль */}
-          {files}
-        </div>
-        <div className="image-block">
-          <div className="image">
-            {source ? <img src={source} /> : <VoidImagePaper />}
-          </div>
-        </div>
-      </div>
-      <div className="buttons">
-        <div className="white-button">
-          <p> Сохранить </p>
-        </div>
-        <div className="black-button" onClick={open}>
-          <input {...getInputProps()} />
-          <p> Загрузить </p>
-        </div>
-      </div>
-    </div>
+        <Stack height={"100%"} p={5} gap={3}>
+        <Typography variant="h4">
+          Анализ размера частиц
+        </Typography>
+  
+        <Stack
+          gap={3}
+          display={"flex"}
+          justifyContent={"space-around"}
+          height={"100%"}
+        >
+          <Box display={"flex"} height={"inherit"}>
+            <Paper sx={{ height: "100%", flex: "0 1 40%" }} overflow={"scroll"}>
+              <Box p={2}>
+                <Typography variant="body">Загруженные файлы</Typography>
+                {files}
+              </Box>
+            </Paper>
+  
+            <Box flex={"0 1 60%"}>
+              {source ? <img src={source} /> : <VoidImagePaper />}
+            </Box>
+          </Box>
+  
+          <Box display={"flex"} justifyContent={"flex-end"} gap={3}>
+            <Button size="large" variant="outlined"> Coхранить</Button>
+            <Button size="large" variant="contained" onClick={open}>
+              <input {...getInputProps()} /> Загрузить
+            </Button>
+          </Box>
+        </Stack>
+      </Stack>
   );
 }
 

@@ -9,10 +9,7 @@ function ErythaggsrvView() {
   return (
     <>
       <CustomAppBar />
-      <Wrapper>
         <Erythaggsrv />
-      </Wrapper>
-
       <CustomFooter />
     </>
   );

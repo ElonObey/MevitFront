@@ -9,9 +9,7 @@ function DeformsView() {
   return (
     <>
       <CustomAppBar />
-      <Wrapper>
         <Deformsrv />
-      </Wrapper>
       <CustomFooter />
     </>
   );
