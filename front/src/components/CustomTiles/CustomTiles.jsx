@@ -11,10 +11,10 @@ import {
 import React from "react";
 import CustomCard from "./CustomCard";
 import { Link } from "react-router-dom";
-import image1 from '../../assets/bld.jpg'
-import image2 from '../../assets/14x.jpg'
-import image3 from '../../assets/bld2.png'
-import image4 from '../../assets/krov_3.jpg'
+import image1 from "../../assets/bld.jpg";
+import image2 from "../../assets/14x.jpg";
+import image3 from "../../assets/bld2.png";
+import image4 from "../../assets/krov_3.jpg";
 
 // const CardSettings = [
 //   {
@@ -43,7 +43,7 @@ export default function CustomTiles() {
   return (
     <Stack my={10} alignItems={"center"} gap={10}>
       <Typography variant="h2"> Выбор функции </Typography>
-      <Box m={3} display={"flex"} gap={6} flexWrap={"wrap"}>
+      <Box m={3} display={"flex"} gap={6} justifyContent={'space-around'} flexWrap={"wrap"}>
         <Link style={{ textDecoration: "none" }} to="deformsrv">
           <CustomCard
             body={
@@ -83,7 +83,6 @@ export default function CustomTiles() {
             img={image4}
           />
         </Link>
-
       </Box>
     </Stack>
   );

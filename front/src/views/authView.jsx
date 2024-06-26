@@ -28,7 +28,7 @@ export default function AuthView() {
       justifyContent={"space-between"}
       alignItems={"center"}
     >
-      <Box width={"30%"} height={"40%"} display={"flex"} alignItems={"center"}>
+      <Box width={"30%"} height={"40%"} display={"flex"} justifyContent={'space-around'} alignItems={"center"}>
         <img src={bigLogo} />
       </Box>
       <Stack sx={{ width: "350px", gap: 1, alignItems: "end" }}>

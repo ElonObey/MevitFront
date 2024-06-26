@@ -14,23 +14,13 @@ import RequireAuth from "./RequireAuth";
 
 function AppRoutes() {
   return (
-    // Feractoring -> MUI
     <AuthProvider>
       <Routes>
-        {/* <Route
-          path="/"
-          element={
-            <RequireAuth>
-              <MainView />
-            </RequireAuth>
-          }
-        /> */}
         <Route path="/" element={<MainView />} />
         <Route path="/deformsrv" element={<RequireAuth><DeformsView /></RequireAuth>} />
         <Route path="/erythaggsrv" element={<RequireAuth><ErythaggsrvView /></RequireAuth>} />
         <Route path="/partsizesrv" element={<RequireAuth><PartsizesrvView /></RequireAuth>} />
         <Route path="/plataggsrv" element={<RequireAuth><PlataggsrvView /></RequireAuth>} />
-        <Route path="/module/" element={<ModuleView />} />
         <Route path="auth/" element={<AuthView />} />
         <Route path="register/" element={<RegisterView />} />
         <Route path="*" element={<NotFoundView />} />
