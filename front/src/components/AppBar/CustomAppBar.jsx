@@ -32,8 +32,8 @@ export default function CustomAppBar() {
   const [anchorElUser, setAnchorElUser] = useState();
   const theme = useTheme();
   const settings = [
-    { name: "Profile", route: "/erythaggsrv" },
-    { name: "Logout", route: "/auth" },
+    { name: "Профиль", path: "", disabled: true },
+    { name: "Выйти", path: "/auth", disabled: false },
   ];
 
   const navigate = useNavigate();
@@ -165,9 +165,13 @@ export default function CustomAppBar() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map(({ name, route }) => (
-                  <MenuItem key={name} onClick={() => routeCheck(route)}>
-                    <Typography textAlign="center">{name}</Typography>
+                {settings.map(({ name, path, disabled, index }) => (
+                  <MenuItem key={index}>
+                    <Link to={path}>
+                    <Button size="small" disabled = {disabled}>
+                      {name}
+                    </Button>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
