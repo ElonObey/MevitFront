@@ -168,9 +168,9 @@ export default function CustomAppBar() {
                 {settings.map(({ name, path, disabled, index }) => (
                   <MenuItem key={index}>
                     <Link to={path}>
-                    <Button size="small" disabled = {disabled}>
-                      {name}
-                    </Button>
+                      <Button size="small" disabled={disabled}>
+                        {name}
+                      </Button>
                     </Link>
                   </MenuItem>
                 ))}
@@ -178,7 +178,7 @@ export default function CustomAppBar() {
 
               <Button
                 onClick={() =>
-                  signout(() => navigate("auth", { replace: true }))
+                  signout(() => navigate("/auth", { replace: true }))
                 }
                 variant="outlined"
                 color="inherit"
@@ -189,7 +189,7 @@ export default function CustomAppBar() {
             </>
           ) : (
             <Button
-              onClick={() => navigate("auth", { replace: true })}
+              onClick={() => navigate("/auth", { replace: true })}
               variant="outlined"
               color="inherit"
               startIcon={<LoginIcon />}
