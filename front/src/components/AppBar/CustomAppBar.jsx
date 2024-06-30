@@ -64,8 +64,8 @@ export default function CustomAppBar() {
     },
     {
       text: "О нас",
-      path: "",
-      disabled: true,
+      path: "/about",
+      disabled: false,
     },
     {
       text: "Помощь",
