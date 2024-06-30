@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { MainView } from "../views/mainView";
 import { NotFoundView } from "../views/notFoundView";
-import { ModuleView } from "../views/moduleView";
 import AuthView from "../views/authView";
 import RegisterView from "../views/registerView";
 import DeformsView from "../views/deformsView";

@@ -1,10 +1,5 @@
 import {
   Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
   Stack,
   Typography,
 } from "@mui/material";
@@ -16,28 +11,6 @@ import image2 from "../../assets/14x.jpg";
 import image3 from "../../assets/bld2.png";
 import image4 from "../../assets/krov_3.jpg";
 
-// const CardSettings = [
-//   {
-//     head: "Анализ процесса деформации эритроцитов",
-//     body: "Измерение способности эритроцитов изменять свою форму при воздействии механических сил",
-//     to: "deformsrv",
-//   },
-//   {
-//     head: "Анализ агрегации тромбоцитов",
-//     body: "Исследование, которое проводится для оценки функции тромбоцитов и их способности к слиянию",
-//     to: "plataggsrv",
-//   },
-//   {
-//     head: "Определение эритроцитов и агрегатов",
-//     body: "Регистрация агрегационной активности эритроцитов, подсчёт количества агрегатов эритроцитов во взвеси отмытых эритроцитов в плазме крови",
-//     to: "erythaggsrv",
-//   },
-//   {
-//     head: "Анализ размера частиц",
-//     body: "Процесс визуализации и измерения распределения частиц по размерам",
-//     to: "partsizesrv",
-//   },
-// ];
 
 export default function CustomTiles() {
   return (
